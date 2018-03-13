@@ -26,4 +26,7 @@ No further research has been done on which code is necessary.
     * character length
 * store logo
     * logo pixel dimension?
-### 4. Send and selected bitmap file to WemosLolin32lite via bluetooth
+
+### 4. Convert bitmap file to c array
+
+### 5. Send c array WemosLolin32lite via bluetooth
