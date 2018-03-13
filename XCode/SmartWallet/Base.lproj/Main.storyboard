@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SmartWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s27-yF-km7">
+                                <rect key="frame" x="166" y="58" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVX-68-Rk6">
+                                <rect key="frame" x="139" y="238" width="96" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Scan Barcode"/>
+                                <connections>
+                                    <segue destination="p4g-2U-Ff9" kind="presentation" id="lX2-oO-qpV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="114" y="36"/>
+        </scene>
+        <!--Scanner Controller-->
+        <scene sceneID="SCV-u9-ebb">
+            <objects>
+                <viewController id="p4g-2U-Ff9" customClass="ScannerController" customModule="SmartWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ar8-mW-hYA"/>
+                        <viewControllerLayoutGuide type="bottom" id="hEU-3y-dNC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vuE-jk-dFV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qNT-aF-71Q">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1WM-gp-6MH">
+                                        <rect key="frame" x="165" y="38" width="44" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNo-ak-azp">
+                                        <rect key="frame" x="8" y="32" width="64" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="FAh-dT-8m4"/>
+                                            <constraint firstAttribute="height" constant="30" id="vl2-pE-CDo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="kGH-fp-omp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="pNo-ak-azp" firstAttribute="leading" secondItem="qNT-aF-71Q" secondAttribute="leading" constant="8" id="4R4-EF-W4t"/>
+                                    <constraint firstAttribute="bottom" secondItem="pNo-ak-azp" secondAttribute="bottom" constant="8" id="JI5-KL-6tu"/>
+                                    <constraint firstItem="1WM-gp-6MH" firstAttribute="centerX" secondItem="qNT-aF-71Q" secondAttribute="centerX" id="Pbj-yH-2Rg"/>
+                                    <constraint firstAttribute="bottom" secondItem="1WM-gp-6MH" secondAttribute="bottom" constant="8" id="e4h-gC-AI3"/>
+                                    <constraint firstAttribute="height" constant="70" id="rhS-9Y-tZD"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No code is detected" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bso-Nd-73l">
+                                <rect key="frame" x="0.0" y="646" width="375" height="21"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="gme-8d-iw6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Bso-Nd-73l" secondAttribute="trailing" id="0jC-tE-AAL"/>
+                            <constraint firstAttribute="trailing" secondItem="qNT-aF-71Q" secondAttribute="trailing" id="1wl-fz-3LT"/>
+                            <constraint firstItem="qNT-aF-71Q" firstAttribute="leading" secondItem="vuE-jk-dFV" secondAttribute="leading" id="7Ob-hg-b0N"/>
+                            <constraint firstItem="qNT-aF-71Q" firstAttribute="centerX" secondItem="vuE-jk-dFV" secondAttribute="centerX" id="9VR-VU-vul"/>
+                            <constraint firstItem="hEU-3y-dNC" firstAttribute="top" secondItem="Bso-Nd-73l" secondAttribute="bottom" id="P25-zg-hzd"/>
+                            <constraint firstItem="qNT-aF-71Q" firstAttribute="top" secondItem="Ar8-mW-hYA" secondAttribute="bottom" constant="-20" id="URL-f6-l7u"/>
+                            <constraint firstItem="Bso-Nd-73l" firstAttribute="leading" secondItem="vuE-jk-dFV" secondAttribute="leading" id="v1K-vv-kGo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="TopBar" destination="qNT-aF-71Q" id="h2a-By-LaE"/>
+                        <outlet property="lblMessage" destination="Bso-Nd-73l" id="GZq-IN-c78"/>
+                        <outlet property="topBar" destination="qNT-aF-71Q" id="v7l-l5-IqZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0S3-N1-eVw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="845.60000000000002" y="35.532233883058474"/>
+        </scene>
+    </scenes>
+</document>
